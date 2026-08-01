@@ -18,6 +18,44 @@ here, not in a local file.
 
 ---
 
+## 2026-08-01 - Published to GitHub
+
+Agent: Claude Code. Repository created by the author; everything else automated.
+
+Remote: `minerclass/NLU-AI-Ethics-4-Relationships`, public, default branch
+`main`. The local working folder is still named `ai-ethics-course-session`; the
+mismatch is harmless but worth knowing when navigating between machines.
+
+A pre-publish scan run before anything was staged caught two things that would
+otherwise have gone public, both fixed in the same commit:
+
+- **`AGENT_LOG.md` recorded the controlling proposal's Google Doc ID.** Replaced
+  with a non-identifying reference. This file is public; treat it accordingly.
+- **`README.md` spelled out both private presenting cautions**, including the
+  observation that the course audience overlaps the study population and the
+  defense date. Since the entire purpose of publishing is that the class will
+  find this repository, that text would have been read by exactly the people it
+  discussed. Replaced with a neutral "Study stage" section stating the study is
+  pre-IRB and collects nothing. Both cautions remain in the private presenter
+  notes, which are the right place for them.
+
+Added for publication: `LICENSE` (MIT for code, with CC BY 4.0 for prose noted
+in the README, matching `dissertation-overview`), `.nojekyll`, and a
+`.gitignore` blocking presenter-notes filenames and PDFs as a second line of
+defence behind keeping those files outside the repository entirely.
+
+Verified: eight files on the remote and no others, confirmed with
+`git ls-tree -r origin/main`; no presenter notes, no PDFs, no planning document;
+the GitHub API reports the repository public on default branch `main`; a scan of
+outbound links in `index.html` and `README.md` returns only the author's own
+public sites, two DOIs, COPE, and Creative Commons.
+
+Not verified this pass: GitHub Pages was **not** enabled at push time
+(`GET /repos/.../pages` returned 404), so no live URL has been loaded or checked.
+The repository description and homepage fields are still empty. `gh` is not
+installed on this machine and no API token is configured, so both remain manual
+steps.
+
 ## 2026-08-01 - Print export exercised, both print stylesheets repaired
 
 Agent: Claude Code. Closes the "no print export generated" open item from the
