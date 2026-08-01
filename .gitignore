@@ -1,0 +1,18 @@
+# Presenter notes are private and live outside this repository on purpose.
+# These patterns are a second line of defence in case a copy is ever dropped in
+# here by accident. The real protection is that the file lives somewhere else.
+*Presenter-Notes*
+*presenter-notes*
+*speaker-notes*
+*.notes.html
+
+# Print exports are generated from the source, not tracked
+*.pdf
+
+# OS and editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
