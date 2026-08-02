@@ -18,6 +18,27 @@ here, not in a local file.
 
 ---
 
+## 2026-08-02 - Preserved staged reveals with reduced motion
+
+Agent: Codex, at the author's request after testing the slide 2 to 3 to 4
+transition in the published deck.
+
+- Removed the reduced-motion override that forced every staged item to full
+  opacity. Slides 3, 5, 7, 12, and 14 now keep their reveal sequences when
+  reduced motion is enabled.
+- Retained the global reduced-motion timing override, so each state change is
+  effectively instant instead of animated.
+- Updated the README to distinguish reduced-motion behavior from print, which
+  still forces every reveal into its completed state.
+
+Verification: replayed all 26 forward actions from slide 2 through slide 14 in
+the local deck with reduced motion active. Slides 3, 5, 7, 12, and 14 all
+entered with staged items at 0.12 opacity, revealed them in the declared order
+at full opacity, and used an effectively instant 0.01 ms transition. Slide and
+step announcements remained correct; the slide 2 to 3 to 4 sequence completed;
+and the browser console stayed clean. These changes are local, uncommitted,
+and unpushed.
+
 ## 2026-08-01 - Restored proposal-controlled language on slide 9
 
 Agent: Codex, at the author's request after checking the controlling Chapters

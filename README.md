@@ -78,7 +78,8 @@ python -m http.server 8000
 
 Reveals change **opacity only**, never layout, so nothing reflows inside a slide that already fits.
 Unrevealed content stays in the DOM and in the accessibility tree: the steps pace the presenter,
-they do not gate content. Print and `prefers-reduced-motion` force the fully revealed state.
+they do not gate content. Print forces the fully revealed state. With `prefers-reduced-motion`,
+the same reveal steps remain in place but change instantly rather than fading.
 
 Slide 11 is the only live demo. **Pre-load the pedagogical-friction card sort before class** and
 keep a screenshot as a fallback. The dissertation overview and browser-local instrument preview

@@ -854,7 +854,6 @@ a:focus-visible,
 
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
-  [data-step] { opacity: 1 !important; }
 }
 
 /* Landscape so slides print at close to their on-screen proportions and fill
