@@ -21,6 +21,10 @@ generative AI, each carrying a different ethical obligation:
 Most disclosure statements collapse all four into one sentence. Naming the collapse is the
 contribution to the course, and it transfers to any dissertation topic.
 
+Slide 8 grounds that framework in one completed decision trace from the July 24 methodology
+revision: the task, material supplied, AI contribution, verification, researcher decision, and
+effect on the study. The example is public-safe and contains no participant material.
+
 Every claim on a slide traces to the controlling Chapters 1–3 proposal (July 24, 2026).
 
 ## Structure
@@ -76,8 +80,9 @@ Reveals change **opacity only**, never layout, so nothing reflows inside a slide
 Unrevealed content stays in the DOM and in the accessibility tree: the steps pace the presenter,
 they do not gate content. Print and `prefers-reduced-motion` force the fully revealed state.
 
-Slide 10 is a live demo. **Pre-load all three tabs before class** and keep screenshots as a
-fallback.
+Slide 11 is the only live demo. **Pre-load the pedagogical-friction card sort before class** and
+keep a screenshot as a fallback. The dissertation overview and browser-local instrument preview
+are reference links for later exploration, not additional live stops.
 
 ## Study stage
 

@@ -44,7 +44,7 @@
   }
 
   function getSlideHeading(slide) {
-    return slide.querySelector("h1, h2")?.textContent.trim() || `Slide ${currentIndex + 1}`;
+    return slide.querySelector("h1, h2")?.innerText.replace(/\s+/g, " ").trim() || `Slide ${currentIndex + 1}`;
   }
 
   function showSlide(index, announce = true, enterCompleted = false) {

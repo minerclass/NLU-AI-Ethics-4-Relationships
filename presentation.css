@@ -467,25 +467,82 @@ a:focus-visible,
 .slide-dark .panel-head { border-bottom-color: var(--line-light); color: #d7b678; }
 
 .panel ul { margin: 0; padding-left: 18px; }
-.panel li { margin-bottom: 7px; font-size: clamp(.74rem, .95cqw, .88rem); line-height: 1.45; }
+.panel li { margin-bottom: 7px; font-size: clamp(.78rem, .98cqw, .92rem); line-height: 1.45; }
 .panel li:last-child { margin-bottom: 0; }
 
 /* Field list, for the memo template */
 
 .field-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .field-list li {
-  padding: 8px 10px;
+  padding: 11px 13px;
   background: rgba(47, 105, 112, .08);
   border-left: 2px solid var(--teal);
-  font-size: clamp(.7rem, .9cqw, .82rem);
+  font-size: clamp(.78rem, .98cqw, .9rem);
+  line-height: 1.4;
+}
+
+.field-list strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--teal-dark);
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* One completed AI-use decision trace */
+
+.decision-case {
+  margin: 0 0 18px;
+  padding: 18px 22px;
+  background: var(--white);
+  border-top: 3px solid var(--teal);
+  box-shadow: 0 8px 24px rgba(18, 28, 36, .07);
+}
+
+.decision-case-title {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.35cqw, 1.18rem);
+  color: var(--teal-dark);
+}
+
+.decision-trace {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 26px;
+  margin: 0;
+}
+
+.decision-trace div {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.decision-trace dt {
+  font-size: .64rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--rust);
+  font-weight: 700;
+}
+
+.decision-trace dd {
+  margin: 0;
+  font-size: clamp(.78rem, .98cqw, .9rem);
+  line-height: 1.42;
+  color: var(--ink-soft);
 }
 
 /* Numbered hard rules */
@@ -523,7 +580,7 @@ a:focus-visible,
   grid-template-columns: 46px minmax(0, 1fr);
   gap: 16px;
   align-items: start;
-  padding: 14px 16px;
+  padding: 20px 22px;
   background: var(--white);
   box-shadow: 0 8px 24px rgba(18, 28, 36, .07);
 }
@@ -536,9 +593,17 @@ a:focus-visible,
   padding-top: 3px;
 }
 
-.demo-list strong { display: block; font-size: clamp(.86rem, 1.1cqw, 1rem); margin-bottom: 3px; }
-.demo-list a { color: var(--blue); font-size: clamp(.7rem, .88cqw, .8rem); word-break: break-all; }
-.demo-list p { margin: 5px 0 0; font-size: clamp(.72rem, .92cqw, .84rem); color: var(--ink-soft); }
+.demo-list strong { display: block; font-size: clamp(1rem, 1.35cqw, 1.18rem); margin-bottom: 4px; }
+.demo-list a { color: var(--blue); font-size: clamp(.78rem, .98cqw, .9rem); word-break: break-all; }
+.demo-list p { margin: 7px 0 0; font-size: clamp(.82rem, 1.04cqw, .96rem); color: var(--ink-soft); }
+
+.reference-links {
+  margin: 0 0 18px;
+  font-size: clamp(.8rem, 1cqw, .92rem);
+  color: var(--ink-soft);
+}
+
+.reference-links a { color: var(--blue); }
 
 /* Tension list */
 
@@ -663,7 +728,9 @@ a:focus-visible,
 .deck.overview .slide ul,
 .deck.overview .slide ol,
 .deck.overview .slide .pull-quote,
-.deck.overview .slide .panel-pair { display: none; }
+.deck.overview .slide .panel-pair,
+.deck.overview .slide .decision-case,
+.deck.overview .slide .reference-links { display: none; }
 
 /* ---------- Notes drawer ---------- */
 
@@ -773,11 +840,13 @@ a:focus-visible,
   .relationship-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .panel-pair { grid-template-columns: minmax(0, 1fr); }
   .field-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .decision-trace { grid-template-columns: minmax(0, 1fr); }
   .stage { padding: 12px; }
 }
 
 @media (max-width: 620px) {
   .relationship-grid { grid-template-columns: minmax(0, 1fr); }
+  .field-list { grid-template-columns: minmax(0, 1fr); }
   .control-dock button span:last-child { display: none; }
 }
 

@@ -18,6 +18,68 @@ here, not in a local file.
 
 ---
 
+## 2026-08-01 - Restored proposal-controlled language on slide 9
+
+Agent: Codex, at the author's request after checking the controlling Chapters
+1-3 proposal.
+
+- Removed the COREQ and SRQR comparison from slide 9. Those standards entered
+  the deck through the Jones/TROUT-AI reading and do not appear in the proposal
+  or the author's qualifying paper.
+- Replaced the coda with the proposal's actual methodological logic: AI output
+  is not context-free, its production conditions must be preserved, and the
+  protocol's choices must remain open to committee scrutiny.
+
+Verification: confirmed zero occurrences of either acronym in the controlling
+Google Doc; verified the proposal's RQ1-RQ3 labels and the source language in
+the `AI-Generated Text and Agentic Artifact Comparison` section; checked the
+HTML diff and whitespace. The dissertation document was not modified.
+
+## 2026-08-01 - Revised for the 30-minute doctoral guest session
+
+Agent: Codex, at the author's request after a full content and delivery review.
+
+The revision keeps the four-relationship argument and the final submitted
+proposal terminology, while making the session more concrete and easier to
+deliver in thirty minutes:
+
+- Replaced the repository-governance slide with one completed, public-safe
+  decision trace from the July 24 methodology revision. It shows the task,
+  material supplied, AI contribution, verification, researcher decision, and
+  effect on the study without exposing private proposal identifiers or
+  participant material.
+- Moved that example directly after the AI-use memo so the sequence now moves
+  from disclosure principle to documented practice before treating AI output
+  as comparison material.
+- Reduced the infrastructure section from three live stops to one card-sort
+  interaction. The overview and browser-local instrument remain follow-up
+  links, not additional live demonstrations.
+- Replaced claims about shared training data and the absence of any current
+  reporting standard with narrower, defensible language about non-independent
+  sources and the AI-specific gaps in COREQ and SRQR.
+- Reframed AI output as traceable comparison material, changed "admissible" to
+  "auditable," corrected the COPE authorship wording, added the Holmes and
+  Zhgenti DOI, and changed the first discussion question from co-authorship to
+  the defensibility of human authorship.
+- Condensed the memo fields, limits, and resource descriptions and increased
+  body copy size in the densest components.
+- Fixed the footer and slide announcement title so line breaks in the title
+  slide become spaces rather than concatenated words.
+
+Verified: JavaScript syntax; 14 sequential slides; no duplicate IDs or missing
+`aria-labelledby` targets; `git diff --check`; all 14 slides rendered and
+reviewed individually at 1440x900; no overflow at 1440x900, 1280x720,
+1024x768, 900x700, 620x800, or 390x844; no page or console errors; Arrow,
+Home, End, overview, help, and Escape controls; and every staged reveal on
+slides 3, 5, 7, 12, and 14. The three public dissertation links and the added
+Holmes and Zhgenti DOI returned HTTP 200.
+
+Not verified this pass: the Jones DOI and COPE page rejected scripted requests
+with HTTP 403, so their unchanged public links were not re-read from their
+landing pages. The private presenter-notes source was not present in this
+workspace and was not updated. These changes remain local, uncommitted, and
+unpushed.
+
 ## 2026-08-01 - Published to GitHub
 
 Agent: Claude Code. Repository created by the author; everything else automated.
