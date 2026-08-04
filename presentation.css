@@ -850,6 +850,11 @@ a:focus-visible,
 }
 
 @media (max-width: 620px) {
+  .presentation-shell {
+    min-height: 0;
+    height: 100vh;
+    height: 100dvh;
+  }
   .presentation-bar { padding: 8px 12px; }
   .stage, .deck { overflow: hidden; }
   .deck, .slide { height: 100%; }
