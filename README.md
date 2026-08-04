@@ -1,130 +1,66 @@
-# Four Relationships
+# AI Tools for Doctoral Work
 
-A 14-slide HTML deck for a 30-minute guest session in a doctoral **AI Ethics in Education**
-course, taught by the dissertation chair.
+A nine-slide HTML deck for a 20-minute guest session in a doctoral **AI Ethics in Education** course.
 
-**Working title:** *Four Relationships: What It Took to Write About Cognitive Bypass Using Tools
-Built to Bypass Cognition*
+## Purpose
 
-## What it is
+The session gives doctoral students an accessible overview of common AI-supported research tools without centering the presenter's dissertation. It focuses on practical choices students can transfer to their own work:
 
-The session answers the chair's specific ask (how AI platforms were used in the proposal, how they
-were included in the work, and how they were discussed in the work) by refusing the tool-tour
-format. Its organizing claim is that the proposal has **four distinct relationships** with
-generative AI, each carrying a different ethical obligation:
+- matching a tool to a specific scholarly task;
+- distinguishing general assistants from research-focused tools;
+- moving from discovery to a decision that can be explained;
+- prompting for questions and critique before finished prose;
+- verifying claims, quotations, citations, and methodological details; and
+- protecting privacy, authorship, evidence quality, access, and rights.
 
-1. **Subject** — the study is about tertiary algorithmicity and pedagogical friction
-2. **Assistant** — bounded support during proposal development, disclosed in the front matter
-3. **Data** — AI output as a prespecified, nonparticipant comparison source
-4. **Infrastructure** — the public GitHub Pages ecosystem around the study
+The timing is designed for **15 minutes of presentation and five minutes of discussion**.
 
-Most disclosure statements collapse all four into one sentence. Naming the collapse is the
-contribution to the course, and it transfers to any dissertation topic.
+## Tools covered
 
-Slide 8 grounds that framework in one completed decision trace from the July 24 methodology
-revision: the task, material supplied, AI contribution, verification, researcher decision, and
-effect on the study. The example is public-safe and contains no participant material.
+- General assistants: ChatGPT, Claude, and Gemini
+- Research-focused tools: Elicit and NotebookLM
+- Source-of-record tool: Zotero
+- Essential complements: library databases, Google Scholar, citation trails, and librarians
 
-Every claim on a slide traces to the controlling Chapters 1–3 proposal (July 24, 2026).
+The deck treats capabilities as changeable and emphasizes task fit, data controls, institutional policy, and verification over brand loyalty.
 
 ## Structure
 
-```
-index.html        All 14 slides. No speaker notes, by design
-presentation.css  Styles, harmonized with the diss-proposal-defense palette
-presentation.js   Deck engine, from diss-proposal-defense/presentation
-README.md         This file
+~~~text
+index.html        Nine slides and all public session content
+presentation.css  Responsive presentation styling
+presentation.js   Keyboard, touch, overview, fullscreen, and progress controls
+README.md         Project description and use instructions
 AGENT_LOG.md      Append-only record of agent-assisted changes
-```
+~~~
 
-There is **no build step** and **no data collection**. Vanilla HTML, CSS, and JS.
-
-## Presenter notes live outside this folder
-
-This deck is **publication-safe**: it contains no presenter notes in the DOM, no notes drawer, and
-no notes control. The notes are in
-
-```
-../AI-Ethics-Session-Presenter-Notes.html
-```
-
-deliberately stored **outside this repository** so that publishing the deck cannot expose them. They
-are private presenting guidance and are not part of the session material.
-
-If you ever move that file in here, you have undone the separation. Don't. `.gitignore` guards
-against it as a second line, but the real protection is that the file lives somewhere else.
-
-The presenter file is a standalone printable brief: a timing rail, then all fourteen slides' notes
-in order with their `[Sources]` lines. It does not sync with the deck. Open it on a second screen,
-on a phone, or print it.
+There is no build step, analytics, form, or data collection. The deck uses vanilla HTML, CSS, and JavaScript.
 
 ## Run locally
 
 Open `index.html` directly, or serve the folder:
 
-```bash
+~~~bash
 python -m http.server 8000
-```
+~~~
 
 ## Presenting
 
 | Key | Action |
 |---|---|
-| `←` `→` `Space` | Previous / next (steps through reveals first) |
-| `Home` `End` | First / last slide |
+| `Left arrow` `Right arrow` `Space` | Previous or next slide |
+| `Home` `End` | First or last slide |
 | `O` | Slide overview |
 | `F` | Fullscreen |
 | `?` | Shortcut help |
 
-Reveals change **opacity only**, never layout, so nothing reflows inside a slide that already fits.
-Unrevealed content stays in the DOM and in the accessibility tree: the steps pace the presenter,
-they do not gate content. Print forces the fully revealed state. With `prefers-reduced-motion`,
-the same reveal steps remain in place but change instantly rather than fading.
-
-Slide 11 is the only live demo. **Pre-load the pedagogical-friction card sort before class** and
-keep a screenshot as a fallback. The dissertation overview and browser-local instrument preview
-are reference links for later exploration, not additional live stops.
-
-## Study stage
-
-The study is at the proposal stage, before data collection and IRB approval. Slide 10 links the
-instrument preview at `dissertationquestionsbeta`, which is a **draft instrument preview and
-collects nothing**. Nothing in this session recruits participants, pilots instruments, or gathers
-data, and nothing said in the room is data.
+No speaker notes are included in the public repository. Print mode reveals all content and formats each slide as a landscape page.
 
 ## Boundaries
 
-Public-facing session material only. No participant data, transcripts, consent records, IRB-protected
-content, district specifics, committee deliberations, credentials, or tokens. This deck collects
-nothing and adds no analytics.
-
-## Terminology
-
-Follows the **final submitted** Chapters 1–3 language, matching `pedagogical-friction/AGENTS.md`:
-
-- Qualitative-dominant convergent mixed methods study. **No case-study framing.**
-- Three learner-facing friction dimensions (noetic, rhetorical, existential) on **infrastructural
-  friction as the conditioning base**, not four co-equal dimensions.
-- Three pressures of tertiary algorithmicity: noetic displacement, rhetorical saturation,
-  existential abstraction.
-- Miner (2026a) = the Zenodo evidence arc. Miner (2026b) = the *i.e.: inquiry in education* article.
-  There is no Miner (2026c).
-- User-facing copy avoids em dashes by author preference.
+This is a general educational overview. It contains no participant data, research instruments, dissertation methods, unpublished findings, private notes, credentials, or tokens. It does not replace institutional, instructor, IRB, publisher, or legal guidance.
 
 ## License
 
-Dual-licensed to separate code from scholarship, matching the rest of the ecosystem:
-
-- **Code** (HTML, CSS, JavaScript): [MIT License](LICENSE).
-- **Written and scholarly content** (slide prose, framework descriptions):
-  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), reuse and adapt with attribution to
-  Micah J. Miner.
-
-The Pedagogical Friction framework and its terminology are the author's scholarly work. Please cite
-the dissertation and related publications when building on them.
-
-## Planning material
-
-The full session design (minute-by-minute run of show, the cut line if running long, and the
-reasoning behind the resource selections) is kept privately outside this repository, alongside the
-presenter notes.
+- **Code** (HTML, CSS, JavaScript): [MIT License](LICENSE)
+- **Written session content**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), reuse and adapt with attribution to Micah J. Miner
