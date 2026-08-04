@@ -24,7 +24,7 @@
 
       <div class="presentation-status">
         <p id="sectionLabel">Opening</p>
-        <p><span id="slideNumber">1</span> / <span id="slideTotal">9</span></p>
+        <p><span id="slideNumber">1</span> / <span id="slideTotal">10</span></p>
       </div>
 
       <div class="presentation-actions">
@@ -56,7 +56,7 @@
           <div class="title-index" aria-hidden="true">
             <span>01</span>
             <div></div>
-            <span>09</span>
+            <span>10</span>
           </div>
         </section>
 
@@ -106,10 +106,57 @@
         </section>
 
         <!-- 5 -->
-        <section class="slide" id="slide-5" data-section="Workflow" aria-labelledby="slide-5-title">
+        <section class="slide" id="slide-5" data-section="Coding agents" aria-labelledby="slide-5-title">
+          <div class="slide-field">
+            <p class="eyebrow">A basic coding-agent workflow</p>
+            <h2 id="slide-5-title">Claude Code and Codex can work with an entire project, not just one prompt.</h2>
+            <div class="panel-pair">
+              <div class="panel">
+                <p class="panel-head">Claude Code</p>
+                <ul>
+                  <li>Runs from a terminal and explores the project as needed.</li>
+                  <li>Can read, edit, test, and help with Git workflows.</li>
+                </ul>
+              </div>
+              <div class="panel">
+                <p class="panel-head">ChatGPT Codex</p>
+                <ul>
+                  <li>Works across app, command-line, IDE, and cloud workflows.</li>
+                  <li>Can inspect files, make changes, run checks, and show its work.</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="field-list">
+              <li><strong>1. Orient</strong>Ask it to explain the repository and locate the relevant files.</li>
+              <li><strong>2. Constrain</strong>Name the goal, boundaries, permissions, and definition of done.</li>
+              <li><strong>3. Act</strong>Let it make a focused edit and run appropriate checks.</li>
+              <li><strong>4. Review</strong>Inspect the diff and the live result before committing or publishing.</li>
+            </ul>
+            <p class="source-line"><strong>Public examples:</strong> <a href="https://github.com/minerclass/diss-proposal-defense" target="_blank" rel="noopener">proposal defense repository</a> &middot; <a href="https://minerclass.github.io/diss-proposal-defense/presentation/" target="_blank" rel="noopener">live defense deck</a> &middot; <a href="https://minerclass.github.io/dissertationquestionsbeta/dissertation-sites/" target="_blank" rel="noopener">dissertation sites hub</a></p>
+            <p class="slide-coda">A coding agent can take actions. Start with a low-stakes copy, keep permissions narrow, and review the result.</p>
+          </div>
+        </section>
+
+        <!-- 6 -->
+        <section class="slide" id="slide-6" data-section="Configuration" aria-labelledby="slide-6-title">
+          <div class="slide-field">
+            <p class="eyebrow">Access and configuration</p>
+            <h2 id="slide-6-title">Pay for a recurring need. Configure for consistent work.</h2>
+            <ol class="relationship-grid">
+              <li><span class="r-num">Paid access</span><strong>Capacity</strong><p>Depending on the product, a plan may add higher limits, more capable models, tools, or longer agent sessions.</p><p class="r-duty"><span>Ask first</span>Does the benefit justify the cost?</p></li>
+              <li><span class="r-num">Instructions</span><strong>Consistency</strong><p>Save durable preferences for voice, privacy, file boundaries, required checks, and output format.</p><p class="r-duty"><span>Examples</span>Custom Instructions, AGENTS.md, CLAUDE.md.</p></li>
+              <li><span class="r-num">Model choice</span><strong>Fit</strong><p>Use a faster or smaller model for routine work and a more capable model for difficult reasoning.</p><p class="r-duty"><span>Rule of thumb</span>Start with the least costly option that works.</p></li>
+              <li><span class="r-num">Reasoning effort</span><strong>Depth</strong><p>Low or light for simple tasks, medium for most work, and high or deeper for ambiguous, multi-step problems.</p><p class="r-duty"><span>Remember</span>More effort means more time and usage, not guaranteed truth.</p></li>
+            </ol>
+            <p class="slide-coda">Paid access should increase practical capacity, not become a proxy for rigor. Courses should still account for access and equity.</p>
+          </div>
+        </section>
+
+        <!-- 7 -->
+        <section class="slide" id="slide-7" data-section="Workflow" aria-labelledby="slide-7-title">
           <div class="slide-field">
             <p class="eyebrow">One practical workflow</p>
-            <h2 id="slide-5-title">Move from discovery to a decision you can explain.</h2>
+            <h2 id="slide-7-title">Move from discovery to a decision you can explain.</h2>
             <ul class="field-list">
               <li><strong>1. Search</strong>Use library databases and research-focused discovery tools.</li>
               <li><strong>2. Save</strong>Capture the source, PDF, metadata, and notes in Zotero.</li>
@@ -122,11 +169,11 @@
           </div>
         </section>
 
-        <!-- 6 -->
-        <section class="slide" id="slide-6" data-section="Prompting" aria-labelledby="slide-6-title">
+        <!-- 8 -->
+        <section class="slide" id="slide-8" data-section="Prompting" aria-labelledby="slide-8-title">
           <div class="slide-field">
             <p class="eyebrow">A reusable prompt pattern</p>
-            <h2 id="slide-6-title">Ask for intellectual support before asking for finished prose.</h2>
+            <h2 id="slide-8-title">Ask for intellectual support before asking for finished prose.</h2>
             <blockquote class="pull-quote">
               <p><strong>Context:</strong> I am a doctoral student examining [topic]. Here are my notes or a source excerpt.</p>
               <p><strong>Task:</strong> Ask me three questions that test my interpretation before suggesting changes.</p>
@@ -137,48 +184,46 @@
           </div>
         </section>
 
-        <!-- 7 -->
-        <section class="slide slide-dark" id="slide-7" data-section="Verification" aria-labelledby="slide-7-title">
+        <!-- 9 -->
+        <section class="slide slide-dark" id="slide-9" data-section="Verification and ethics" aria-labelledby="slide-9-title">
           <div class="slide-field">
             <p class="eyebrow">Before you keep the output</p>
-            <h2 id="slide-7-title">Five checks protect the integrity of the work.</h2>
-            <ol class="rule-list">
-              <li>Can I trace every factual claim to an original, credible source?</li>
-              <li>Did I read the source I am citing, not only a summary of it?</li>
-              <li>Are the quotation, page, author, year, title, and DOI accurate?</li>
-              <li>Does the final passage reflect my interpretation, argument, and voice?</li>
-              <li>Could I explain what the tool changed, why I kept it, and how I checked it?</li>
-            </ol>
-            <p class="slide-coda">Agreement between two AI systems is not verification. Return to the source.</p>
+            <h2 id="slide-9-title">Verify the work and protect the people around it.</h2>
+            <div class="panel-pair">
+              <div class="panel">
+                <p class="panel-head">Verify</p>
+                <ul>
+                  <li>Trace factual claims to credible original sources.</li>
+                  <li>Read what you cite; check quotations and metadata.</li>
+                  <li>Keep your interpretation, argument, and voice visible.</li>
+                  <li>Explain what changed, what you kept, and how you checked it.</li>
+                </ul>
+              </div>
+              <div class="panel">
+                <p class="panel-head">Protect</p>
+                <ul>
+                  <li>Do not upload identifiable or sensitive data to an unapproved tool.</li>
+                  <li>Follow course, program, IRB, and publisher policies.</li>
+                  <li>Review data controls, copyright, permissions, cost, and access.</li>
+                  <li>Pause and ask when the policy or boundary is unclear.</li>
+                </ul>
+              </div>
+            </div>
+            <p class="slide-coda">A more capable model increases the need for review; agreement between models is still not verification.</p>
           </div>
         </section>
 
-        <!-- 8 -->
-        <section class="slide" id="slide-8" data-section="Ethics" aria-labelledby="slide-8-title">
-          <div class="slide-field">
-            <p class="eyebrow">Non-negotiable boundaries</p>
-            <h2 id="slide-8-title">Ethical use is about the material, the decision, and the context.</h2>
-            <ol class="relationship-grid">
-              <li><span class="r-num">Privacy</span><strong>Protect people</strong><p>Do not upload participant, student, staff, or other identifiable sensitive data to an unapproved tool.</p></li>
-              <li><span class="r-num">Authorship</span><strong>Own the work</strong><p>Follow course, program, IRB, and publisher policies. Disclose material assistance when required.</p></li>
-              <li><span class="r-num">Evidence</span><strong>Read what you cite</strong><p>Do not use a chatbot response as scholarly evidence. Verify the source and its methods.</p></li>
-              <li><span class="r-num">Access and rights</span><strong>Check the conditions</strong><p>Review data controls, copyright, account permissions, cost, and who may be excluded.</p></li>
-            </ol>
-            <p class="slide-coda">When policy is unclear, pause before uploading. Ask, document the answer, and choose the safer path.</p>
-          </div>
-        </section>
-
-        <!-- 9 -->
-        <section class="slide slide-dark" id="slide-9" data-section="Discussion" aria-labelledby="slide-9-title">
+        <!-- 10 -->
+        <section class="slide slide-dark" id="slide-10" data-section="Discussion" aria-labelledby="slide-10-title">
           <div class="slide-field">
             <p class="eyebrow">Five-minute discussion</p>
-            <h2 id="slide-9-title">Leave with one experiment and one boundary.</h2>
+            <h2 id="slide-10-title">Leave with one experiment and one boundary.</h2>
             <ol class="question-list">
-              <li>What is one low-stakes doctoral task where a tool could support your thinking without replacing it?</li>
-              <li>What is one part of your scholarly work you will not delegate, and why?</li>
+              <li>What low-stakes task, tool, and reasoning level would you try first?</li>
+              <li>What instruction or boundary should persist every time you use it?</li>
             </ol>
-            <p class="slide-coda">Try this: log the date, tool, task, material supplied, output used, verification, and your final decision.</p>
-            <p class="source-line"><strong>Explore:</strong> <a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a> &middot; <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a> &middot; <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a> &middot; <a href="https://elicit.com/" target="_blank" rel="noopener">Elicit</a> &middot; <a href="https://notebooklm.google.com/" target="_blank" rel="noopener">NotebookLM</a> &middot; <a href="https://www.zotero.org/" target="_blank" rel="noopener">Zotero</a></p>
+            <p class="slide-coda">Log the date, tool, model or effort level, task, material supplied, output used, verification, and final decision.</p>
+            <p class="source-line"><strong>Explore:</strong> <a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a> &middot; <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a> &middot; <a href="https://developers.openai.com/codex/" target="_blank" rel="noopener">Codex</a> &middot; <a href="https://docs.anthropic.com/en/docs/claude-code/getting-started" target="_blank" rel="noopener">Claude Code</a> &middot; <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a> &middot; <a href="https://elicit.com/" target="_blank" rel="noopener">Elicit</a> &middot; <a href="https://notebooklm.google.com/" target="_blank" rel="noopener">NotebookLM</a> &middot; <a href="https://www.zotero.org/" target="_blank" rel="noopener">Zotero</a></p>
           </div>
         </section>
 
