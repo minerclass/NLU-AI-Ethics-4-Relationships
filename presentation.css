@@ -851,6 +851,8 @@ a:focus-visible,
 
 @media (max-width: 620px) {
   .presentation-bar { padding: 8px 12px; }
+  .stage, .deck { overflow: hidden; }
+  .deck, .slide { height: 100%; }
   .slide {
     align-content: start;
     overflow-y: auto;
