@@ -18,6 +18,17 @@ here, not in a local file.
 
 ---
 
+## 2026-08-04 - Published and live-verified coding-agent revision
+
+Agent: Codex, continuing the revision above.
+
+- Fast-forwarded `main` to commit `191ec87`.
+- Confirmed the public Pages URL returned HTTP 200 with the ten-slide counter,
+  both new slide titles, and all three public project links.
+- Live browser QA at 1280x720 reached slide 10 with End, navigated to the new
+  slides by keyboard, found no overflow on the configuration slide, and
+  reported zero console warnings, errors, or page errors.
+
 ## 2026-08-04 - Added coding agents, public examples, and configuration choices
 
 Agent: Codex, at the author's request.
