@@ -18,6 +18,81 @@ here, not in a local file.
 
 ---
 
+## 2026-08-04 - History rewrite: two abandoned commits on main
+
+Agent: Claude Code, at the author's request.
+
+**If another machine has `581e23c` or `42af47a`, those commits no longer exist
+on `origin/main`.** Reset to them or rebase onto them and you will resurrect
+abandoned history. Fetch and hard-reset your local `main` to `origin/main`.
+
+What happened: the model-tier change below was first pushed as `581e23c`, whose
+commit message was malformed. It began and ended with a literal `@` line, so
+`git log --oneline` showed the subject as `@` with the real subject on line
+two. Cause was PowerShell here-string syntax (`@'...'@`) used in a Bash shell,
+which does not support it. `42af47a` then recorded live verification and
+documented the defect.
+
+At the author's request both were collapsed via `git reset --soft 965f089` and
+recommitted as a single commit with a correct message, then force-pushed with
+`--force-with-lease`. `origin/main` was confirmed to still equal `42af47a`
+immediately beforehand, so no other machine's work was overwritten.
+
+**No file content changed in the rewrite.** The published deck was identical
+before and after; only the commit message envelope differed.
+
+## 2026-08-04 - Named the model tiers on slide 6, published and live-verified
+
+Agent: Claude Code, at the author's request.
+
+Refines, and partly reverses, the "Kept plan and model names general" decision
+in the coding-agent entry below. That entry's stated reason (product names
+change) is sound, so this change takes the middle path: name the **tier
+ladders**, omit **version numbers**.
+
+- Slide 6, Model choice: added "Fastest to most capable, Claude offers Haiku,
+  Sonnet, Opus, and Fable; ChatGPT offers Luna, Terra, and Sol."
+- Changed the rule of thumb to lead with "Learn the ladder, not the version
+  number," so the slide carries its own maintenance rationale.
+- Rationale: a student opening the model menu sees these literal words. "A more
+  capable model" does not tell them which entry that is. Tier names are stable
+  across releases; version numbers are what actually churn.
+- No other slide touched. Still ten slides.
+
+Verification: tier names checked against current vendor documentation on
+2026-08-04, which is the "check model labels before presenting" follow-up the
+entry below left open. Claude: Haiku, Sonnet, Opus, Fable. ChatGPT: the GPT-5.6
+family as Luna, Terra, Sol (released 2026-07-09). Re-probed overflow after the
+edit, since this added text to an existing grid cell. At 1280x720 all ten
+slides clear the stage, slide 6 with 172 px of headroom (tightest is slide 5 at
+139 px), and no horizontal document overflow. At 390x844 there is no horizontal
+overflow and slide 6 scrolls within the stage as designed: `.slide` computes
+`overflow-y: auto` with scroll height 1077 against client height 680, so the
+added lines are reachable rather than clipped. Console clean at both sizes.
+
+Not verified this pass: no screenshot review, because the browser pane was not
+displaying and capture timed out. Layout was confirmed numerically only. Print
+export not regenerated.
+
+Live verification: published to `main` at the author's request. The public Pages
+URL returned HTTP 200 and served all three new strings, "Haiku, Sonnet, Opus,
+and Fable", "Luna, Terra, and Sol", and "Learn the ladder, not the version
+number", checked with a cache-busting query so the result is not a stale CDN
+copy.
+
+### Warning for the next agent: this repository diverges across machines
+
+The local working copy on the author's desktop was **13 commits behind**
+`origin/main` at the start of this session, and `git status` was clean, so
+nothing signalled the drift. A review was written against the superseded
+14-slide dissertation deck before anyone noticed, and had to be discarded.
+
+**Run `git fetch` and compare against `origin/main` before reading or editing
+anything in this repository.** A clean `git status` says nothing about whether
+the local copy matches what is published. The discarded rewrite is in the local
+stash as "stale-base 20min rewrite (superseded by origin/main) 2026-08-04" and
+can be dropped once no longer wanted.
+
 ## 2026-08-04 - Published and live-verified coding-agent revision
 
 Agent: Codex, continuing the revision above.
