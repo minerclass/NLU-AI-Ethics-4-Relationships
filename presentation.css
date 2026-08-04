@@ -834,19 +834,32 @@ a:focus-visible,
 /* ---------- Narrow screens ---------- */
 
 @media (max-width: 900px) {
-  .presentation-bar { grid-template-columns: 1fr auto; gap: 12px; }
+  .presentation-bar { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
+  .presentation-brand { width: auto; max-width: 100%; min-width: 0; }
+  .presentation-brand > span:last-child { min-width: 0; overflow: hidden; }
+  .presentation-brand strong,
+  .presentation-brand small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .presentation-status { display: none; }
   .action-label { display: none; }
   .relationship-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .panel-pair { grid-template-columns: minmax(0, 1fr); }
   .field-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .decision-trace { grid-template-columns: minmax(0, 1fr); }
+  .stage, .deck, .slide { min-width: 0; min-height: 0; }
   .stage { padding: 12px; }
 }
 
 @media (max-width: 620px) {
+  .presentation-bar { padding: 8px 12px; }
+  .slide {
+    align-content: start;
+    overflow-y: auto;
+    padding: 22px 18px;
+  }
+  .slide-field { align-self: start; }
   .relationship-grid { grid-template-columns: minmax(0, 1fr); }
   .field-list { grid-template-columns: minmax(0, 1fr); }
+  .control-dock { gap: 10px; padding-inline: 12px; }
   .control-dock button span:last-child { display: none; }
 }
 
