@@ -18,6 +18,39 @@ here, not in a local file.
 
 ---
 
+## 2026-08-04 - Added coding agents, public examples, and configuration choices
+
+Agent: Codex, at the author's request.
+
+- Expanded the 20-minute overview from nine to ten slides without restoring the
+  earlier dissertation-specific session.
+- Added a basic inspect-constrain-act-review workflow for Claude Code and
+  ChatGPT Codex.
+- Added public links to the proposal defense repository, live defense deck, and
+  dissertation sites hub as examples of repository-supported doctoral work.
+- Added a general explanation of paid access, durable custom instructions,
+  model choice, and low/medium/high reasoning effort. Kept plan and model names
+  general because product access and limits change.
+- Combined verification and ethical boundaries into one slide to preserve the
+  15-minute presentation plus five-minute discussion structure.
+- Updated the final discussion prompt, resource links, and README.
+
+Verification: checked current official OpenAI Codex guidance and Anthropic
+Claude Code documentation; confirmed all three public project links returned
+HTTP 200 before adding them. JavaScript syntax and Git whitespace checks
+passed. Static checks confirmed ten sequential slides, unique IDs, complete
+aria-labelledby targets, and the 10-slide counter. Browser QA at 1280x720 found
+no vertical or horizontal overflow on any slide; visual inspection covered the
+two new slides. At 390x844 there was no horizontal page or slide overflow, and
+long slides scrolled within the stage. Arrow navigation, Home, overview, help,
+and Escape worked, and the console reported zero errors or warnings.
+
+Known follow-up: paid-plan benefits, model labels, and usage limits are
+changeable product details and should be checked against current official
+documentation before presenting. The public dissertation examples remain
+proposal-stage public scholarship, not evidence of participant recruitment,
+data collection, analysis, findings, or IRB approval.
+
 ## 2026-08-04 - Simplified to a 20-minute doctoral tool overview
 
 Agent: Codex, at the author's request.
