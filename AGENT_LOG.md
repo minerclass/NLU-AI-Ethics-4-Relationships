@@ -18,6 +18,44 @@ here, not in a local file.
 
 ---
 
+## 2026-08-04 - Simplified to a 20-minute doctoral tool overview
+
+Agent: Codex, at the author's request.
+
+- Replaced the 14-slide, 30-minute dissertation-specific session with a
+  nine-slide format designed for 15 minutes of presentation and five minutes
+  of discussion.
+- Reframed the content for doctoral students generally: task selection,
+  general-purpose assistants, research-focused tools, a six-step workflow, a
+  reusable prompt pattern, verification, and ethical boundaries.
+- Covered ChatGPT, Claude, Gemini, Elicit, NotebookLM, and Zotero without
+  presenting any one product as authoritative or treating model agreement as
+  verification.
+- Removed proposal quotations, dissertation methods, framework details,
+  participant-comparison protocols, public dissertation demos, and staged
+  reveals.
+- Added a self-contained favicon, corrected prompt-panel contrast, contained
+  the narrow header, and made long phone-size slides scroll within the visible
+  presentation stage.
+- Updated the README and stylesheet label to match the revised purpose and
+  timing.
+
+Verification: checked JavaScript syntax and Git whitespace; confirmed nine
+sequential slides, unique IDs, valid `aria-labelledby` targets, no staged
+reveals, and no legacy dissertation-specific phrases in the slide content.
+Browser QA covered 1440x900, 1280x720, and 390x844. At 1280x720 all nine slides
+fit the visible stage; at 390x844 there was no horizontal overflow and the long
+slides scrolled vertically. Arrow, Home, End, overview, help, and Escape
+controls worked. The console reported zero errors and warnings. After
+publishing commit `240bad4` to `main`, the live Pages URL returned HTTP 200,
+showed the new title and nine-slide count, removed the old title, advanced
+through slides 1-9 by keyboard, kept one active slide, and remained
+console-clean.
+
+Known follow-up: any private presenter notes created for the earlier 14-slide
+version are not synchronized with this revision and should not be used without
+being rewritten.
+
 ## 2026-08-02 - Preserved staged reveals with reduced motion
 
 Agent: Codex, at the author's request after testing the slide 2 to 3 to 4
